@@ -1,6 +1,6 @@
 from PyQt6.QtGui import QFont
 from qfluentwidgets import BodyLabel, qconfig
-from core.get_theme import get_theme
+from helper import config
 
 
 class StyledTitle(BodyLabel):
@@ -17,7 +17,7 @@ class StyledTitle(BodyLabel):
         qconfig.themeChanged.connect(self.update_style)
 
     def update_style(self):
-        color = get_theme()
+        color = config.get_theme()
 
         self.setStyleSheet(f"""
             color: {color};

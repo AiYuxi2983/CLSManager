@@ -1,9 +1,9 @@
 import sys
-from main.main import init_application
+from app.app import launch
 
 
 def CLSManager():
-    return init_application()
+    return launch()
 
 
 if __name__ == "__main__":
